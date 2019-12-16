@@ -2,8 +2,10 @@ buildscript {
     apply from: "${rootDir}/gradle/dependencies.gradle"
 
     repositories {
-        google()
-        jcenter()
+               maven { url "https://jitpack.io" }
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
@@ -18,9 +20,10 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenCentral()
-        google()
-        jcenter()
+               maven { url "https://jitpack.io" }
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
         // For publishing Maps SDK files to Bintray
         maven { url 'https://mapbox.bintray.com/mapbox' }
         // Snapshot repository
